@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border-bottom: 5px solid white;
+    position: relative;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#character {
+    width: 30px;
+    height: 30px;
+    background-color: #ff5722;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+}
+
+.animate {
+    animation: jump 0.4s linear;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 100px; }
+    100% { bottom: 0; }
+}
+
+#block {
+    width: 20px;
+    height: 40px;
+    background-color: #00bcd4;
+    position: absolute;
+    bottom: 0;
+    right: -20px;
+    animation: blockMove 1.5s infinite linear;
+}
+
+@keyframes blockMove {
+    0% { right: -20px; }
+    100% { right: 420px; }
+}
+
+.instruction {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #aaa;
+}
